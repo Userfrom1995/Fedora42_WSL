@@ -16,15 +16,22 @@ How to Get Started
 2. Create a target directory to hold the distribution:
 
    PowerShell:
+
+   ```
    mkdir C:\WSL\Fedora42
+   ```
 
 3. Import the distro into WSL:
 
    PowerShell (run from the directory containing the tar file):
+   ````
    wsl --import fedora42 C:\WSL\Fedora42 .\fedora42-wsl-v1.tar.gz --version 2
+   ````
 
 4. Launch Fedora:
+   ```
    wsl -d fedora42
+   ```
 
 5. Open VS Code and connect to your Fedora instance through WSL:
    - Install the "Remote - WSL" extension in VS Code.
@@ -40,7 +47,8 @@ The current image has a default user preconfigured:
 - Username: myuser
 - Password: user
 
-This is for demonstration purposes and **should be changed** after first login. In future releases, a dynamic setup script will allow setting your username and password on first launch, similar to official WSL distributions from the Microsoft Store.
+### Important Note :
+>This is for demonstration purposes and **should be changed** after first login. In future releases, a dynamic setup script will allow setting your username and password on first launch, similar to official WSL distributions from the Microsoft Store.
 
 -------------------------------------------------------
 Plans for Future Improvements
