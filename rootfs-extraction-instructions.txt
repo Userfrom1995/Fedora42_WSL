@@ -1,0 +1,16 @@
+mkdir -p $HOME/fedora42-rootfs
+
+sudo dnf install --installroot=$HOME/fedora42-rootfs \
+  --releasever=42 \
+  --setopt=install_weak_deps=False \
+  --setopt=module_platform_id=platform:f42 \
+  --use-host-config \
+  --nodocs -y @core
+
+
+cd $HOME/fedora42-rootfs
+sudo tar --numeric-owner -czf $HOME/Fedora42-rootfs.tar.gz .
+
+
+
+https://dev.to/bowmanjd/install-fedora-on-windows-subsystem-for-linux-wsl-4b26
